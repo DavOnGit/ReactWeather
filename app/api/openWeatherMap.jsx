@@ -7,7 +7,7 @@ module.exports = {
     var encodedLocation = encodeURIComponent(location)
     var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`
     
-    return axios.get(requestUrl).then(function(res){console.log('FKU!')
+    return axios.get(requestUrl).then(function(res){
       if(res.data.cod && res.data.message){alert('FKK!')
         throw res.response.data.message
       } else {
